@@ -2,7 +2,7 @@ export const STUDIO_BODY_HTML = `
 <header class="top">
   <div class="brand">
     <div class="logo mg-ring-avatar" title="MG Creator Motion">
-      <img src="/assets/aistudio/Gemini_Generated_Image_hs97wyhs97wyhs97_5d45ed64.jpeg" alt="MG Creator" referrerpolicy="no-referrer" />
+      <img src="./assets/aistudio/Gemini_Generated_Image_hs97wyhs97wyhs97_5d45ed64.jpeg" alt="MG Creator" referrerpolicy="no-referrer" />
     </div>
     <div class="mg-brand-lockup">
       <div class="mg-brand-row">
@@ -55,7 +55,7 @@ export const STUDIO_BODY_HTML = `
 
     <div class="mg-hero-center">
       <div class="mg-neon-ring-frame">
-        <img src="/assets/aistudio/Gemini_Generated_Image_hs97wyhs97wyhs97_5d45ed64.jpeg" alt="MG Creator — Building AI Tools For A Better Future" class="mg-creator-portrait" referrerpolicy="no-referrer" />
+        <img src="./assets/aistudio/Gemini_Generated_Image_hs97wyhs97wyhs97_5d45ed64.jpeg" alt="MG Creator — Building AI Tools For A Better Future" class="mg-creator-portrait" referrerpolicy="no-referrer" />
         <div class="mg-ring-overlay-badge">
           <svg class="mg-logo-full" viewBox="0 0 220 68" aria-label="MG Creator">
             <path d="M22 54V8h18l16 25 16-25h18v46H74V26L57 51h-2L38 26v28H22Z" fill="#FFFFFF"/>
@@ -189,7 +189,7 @@ export const STUDIO_BODY_HTML = `
     <div class="mg-studio-banner">
       <div class="mg-studio-left">
         <div class="mg-studio-avatar">
-          <img src="/assets/aistudio/Gemini_Generated_Image_hs97wyhs97wyhs97_5d45ed64.jpeg" alt="MG Creator" referrerpolicy="no-referrer" />
+          <img src="./assets/aistudio/Gemini_Generated_Image_hs97wyhs97wyhs97_5d45ed64.jpeg" alt="MG Creator" referrerpolicy="no-referrer" />
         </div>
         <div class="mg-studio-meta">
           <div class="mg-studio-title">
