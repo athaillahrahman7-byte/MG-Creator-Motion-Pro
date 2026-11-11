@@ -199,7 +199,13 @@ function oo(){const e=Se.style,a=$e(),t=(a,t)=>`<select data-s="${a}">${t.map(((
       name: "MG Creator Character",
       desc: "Karakter & Logo Resmi MG Creator — Building AI Tools For A Better Future",
       origin: "upload"
-    }).then((assetObj) => {
+    }).catch(() =>
+      os("./public/assets/aistudio/Gemini_Generated_Image_hs97wyhs97wyhs97_5d45ed64.jpeg", {
+        name: "MG Creator Character",
+        desc: "Karakter & Logo Resmi MG Creator — Building AI Tools For A Better Future",
+        origin: "upload"
+      })
+    ).then((assetObj) => {
       if (assetObj && Se.isDemoShowcase) {
         const prodEv = Se.events.find(ev => ev.id === "d15");
         if (prodEv) prodEv.asset = assetObj.id;

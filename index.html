@@ -12,10 +12,48 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Bebas+Neue&family=Bungee&family=Chakra+Petch:wght@600;700&family=Inter:ital,wght@0,400;0,600;0,700;0,800;0,900;1,800;1,900&family=JetBrains+Mono:wght@400;500;600;700&family=Lora:ital,wght@0,600;0,700;1,700&family=Outfit:wght@500;600;700;800&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,800;1,900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,800&family=Quicksand:wght@600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+      html, body {
+        background-color: #030407;
+        color: #F8FAFC;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+      }
+    </style>
   </head>
   <body class="bg-[#030407] text-[#F8FAFC] antialiased selection:bg-[#FF1E27] selection:text-white">
     <div id="root"></div>
     <script type="module" src="./src/main.tsx"></script>
+    <script>
+      (function () {
+        var isViteDev = !!document.querySelector('script[src*="@vite/client"]');
+        var hasRawTsx = !!document.querySelector('script[src*="src/main.tsx"]');
+        if (!isViteDev && hasRawTsx) {
+          var css = document.createElement('link');
+          css.rel = 'stylesheet';
+          css.href = './public/bundle/app.css';
+          css.onerror = function () {
+            var altCss = document.createElement('link');
+            altCss.rel = 'stylesheet';
+            altCss.href = './bundle/app.css';
+            document.head.appendChild(altCss);
+          };
+          document.head.appendChild(css);
+
+          var js = document.createElement('script');
+          js.type = 'module';
+          js.src = './public/bundle/app.js';
+          js.onerror = function () {
+            var altJs = document.createElement('script');
+            altJs.type = 'module';
+            altJs.src = './bundle/app.js';
+            document.body.appendChild(altJs);
+          };
+          document.body.appendChild(js);
+        }
+      })();
+    </script>
   </body>
 </html>
 

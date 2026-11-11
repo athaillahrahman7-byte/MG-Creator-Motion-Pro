@@ -11,6 +11,7 @@ export default function App() {
     const host = hostRef.current;
     if (!host || initializedRef.current) return;
     initializedRef.current = true;
+    (window as any).__MG_BOOTED__ = true;
 
     host.innerHTML = STUDIO_BODY_HTML;
     bootAutoMotionStudio();
