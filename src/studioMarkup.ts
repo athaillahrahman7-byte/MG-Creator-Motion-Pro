@@ -1,0 +1,316 @@
+export const STUDIO_BODY_HTML = `
+<header class="top">
+  <div class="brand">
+    <div class="logo mg-ring-avatar" title="MG Creator Motion">
+      <img src="/assets/aistudio/Gemini_Generated_Image_hs97wyhs97wyhs97_5d45ed64.jpeg" alt="MG Creator" referrerpolicy="no-referrer" />
+    </div>
+    <div class="mg-brand-lockup">
+      <div class="mg-brand-row">
+        <svg class="mg-wordmark-svg" viewBox="0 0 132 48" aria-hidden="true">
+          <path d="M4 44V6h14l13 21 13-21h14v38H45V21L32 41h-2L17 21v23H4Z" fill="#FFFFFF"/>
+          <path d="M92 6h34l-7 11H91c-7 0-12 4.5-12 11s5 11 12 11h15v-7H93v-9h27v21c0 3-2.5 5-6 5H89c-14.5 0-24-9-24-21S74.5 6 92 6Z" fill="#FF1E27"/>
+        </svg>
+        <b>MG Creator Motion</b>
+      </div>
+      <span class="sub">BUILDING <em>AI</em> TOOLS FOR A BETTER FUTURE</span>
+    </div>
+  </div>
+  <div class="mg-header-hud" aria-hidden="true">
+    <span class="mg-hud-tag"><i>AI</i> INNOVATION · FUTURE</span>
+    <span class="mg-hud-sep"></span>
+    <span class="mg-hud-tag"><i>BUILD</i> CREATE · IMPACT</span>
+  </div>
+  <div class="actions">
+    <button id="localModeBadge" class="local-mode-badge" type="button" role="status" aria-live="polite" hidden title="Mode Lokal / Offline Aktif — Pekerjaanmu berjalan 100% di browser tanpa tergantung kuota AI dan tersimpan otomatis. Klik untuk info atau kembali ke AI.">
+      <span class="local-mode-dot" aria-hidden="true"></span>
+      <span class="local-mode-label"><b>MODE LOKAL</b> · Tanpa AI (Kerja Aman)</span>
+    </button>
+    <span id="saveState" class="save-state" role="status"></span>
+    <button class="btn" id="btnGuide" type="button" aria-label="Panduan" title="Panduan"><span aria-hidden="true">📖</span><span class="lbl"> Panduan</span></button>
+    <button class="btn" id="btnNew" type="button" aria-label="Upload Video / Produk" title="Upload Video atau Buat Video Produk"><span aria-hidden="true">📤</span><span class="lbl"> Upload Video / Produk</span></button>
+    <button class="btn primary" id="btnRender" type="button">⬇ Render Video</button>
+  </div>
+</header>
+
+<section id="landing">
+  <div class="mg-hero-showcase">
+    <div class="mg-hud-card mg-hud-card-left">
+      <div class="mg-hud-lines">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="mg-hud-motto">
+        <b class="red">AI</b>
+        <b>INNOVATION</b>
+        <b>FUTURE</b>
+      </div>
+      <div class="mg-hud-bars">
+        <div class="mg-bar-row"><i style="width:78%" class="red"></i></div>
+        <div class="mg-bar-row"><i style="width:54%"></i></div>
+        <div class="mg-bar-row"><i style="width:92%" class="red"></i></div>
+      </div>
+      <div class="mg-hud-chart" aria-hidden="true">
+        <i style="height:35%"></i><i style="height:55%"></i><i style="height:45%" class="red"></i><i style="height:80%" class="red"></i><i style="height:65%"></i><i style="height:95%" class="red"></i><i style="height:50%"></i>
+      </div>
+    </div>
+
+    <div class="mg-hero-center">
+      <div class="mg-neon-ring-frame">
+        <img src="/assets/aistudio/Gemini_Generated_Image_hs97wyhs97wyhs97_5d45ed64.jpeg" alt="MG Creator — Building AI Tools For A Better Future" class="mg-creator-portrait" referrerpolicy="no-referrer" />
+        <div class="mg-ring-overlay-badge">
+          <svg class="mg-logo-full" viewBox="0 0 220 68" aria-label="MG Creator">
+            <path d="M22 54V8h18l16 25 16-25h18v46H74V26L57 51h-2L38 26v28H22Z" fill="#FFFFFF"/>
+            <path d="M134 8h48l-9 13h-39c-9 0-15 5.5-15 13.5S125 48 134 48h21v-9h-17V28h35v25c0 4-3 6-7 6h-34c-18 0-30-11-30-25.5S116 8 134 8Z" fill="#FF1E27"/>
+          </svg>
+          <div class="mg-creator-spaced">C R E A T O R</div>
+          <div class="mg-creator-sub">BUILDING <span>AI</span> TOOLS FOR A BETTER FUTURE</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mg-hud-card mg-hud-card-right">
+      <div class="mg-radar-wrap" aria-hidden="true">
+        <svg viewBox="0 0 120 120" class="mg-radar-svg">
+          <circle cx="60" cy="60" r="52" fill="none" stroke="rgba(255,255,255,0.16)" stroke-width="1.5" stroke-dasharray="18 8"/>
+          <circle cx="60" cy="60" r="38" fill="none" stroke="#FF1E27" stroke-width="2" stroke-dasharray="32 14" opacity="0.85"/>
+          <circle cx="60" cy="60" r="24" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1.5"/>
+          <circle cx="60" cy="60" r="9" fill="none" stroke="#FF1E27" stroke-width="2"/>
+          <line x1="60" y1="2" x2="60" y2="22" stroke="#FF1E27" stroke-width="1.5"/>
+          <line x1="60" y1="98" x2="60" y2="118" stroke="#FF1E27" stroke-width="1.5"/>
+          <line x1="2" y1="60" x2="22" y2="60" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+          <line x1="98" y1="60" x2="118" y2="60" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <div class="mg-hud-motto right">
+        <b class="red">BUILD</b>
+        <b>CREATE</b>
+        <b>IMPACT</b>
+      </div>
+      <div class="mg-hud-streaks">
+        <span class="red"></span><span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-brand">
+    <div>
+      <div class="hero-name">
+        <span>MG Creator Motion</span>
+        <span class="eyebrow">● MG CREATOR AI MOTION SYSTEM</span>
+        <button type="button" class="btn primary" id="btnBackStudio" style="padding:6px 14px;font-size:12.5px">🎬 Buka Studio Editor (15+ Gaya Motion)</button>
+      </div>
+    </div>
+  </div>
+  <h1>Bikin video motion berkarakter <em>MG Creator</em><br><em>cukup sekali klik.</em></h1>
+  <p class="lead">Upload video kamu ngomong, atau cukup isi info produk + foto/video produkmu. Sistem AI <b>MG Creator Motion</b> menyusun caption dinamis, b-roll, animasi penjelasan HUD, latar bergerak, transisi, ganti angle kamera, musik &amp; efek suara, sampai ajakan (CTA). Hasilnya langsung jadi MP4 di browser.</p>
+
+  <div id="draftsBox" class="drafts-box" hidden>
+    <h3>📂 Lanjutkan draf MG Creator Motion</h3>
+    <p class="hint">Semua editan tersimpan otomatis. Buka lagi kapan saja, edit, lalu render ulang.</p>
+    <div class="drafts" id="draftList"></div>
+  </div>
+  <div id="draftNeed" class="draft-need" role="status" aria-live="polite" hidden>
+    <div><b id="draftNeedT"></b><small>Semua editan tetap aman. Durasi draf <span id="draftNeedD"></span>. Pilih file video yang sama supaya teks &amp; efek tetap pas.</small></div>
+    <div class="row2"><button class="btn primary" type="button" id="draftNeedPick">📂 Pilih video</button><button class="btn" type="button" id="draftNeedCancel">Batal</button></div>
+  </div>
+
+  <div class="modes" role="tablist" aria-label="Jenis video">
+    <button type="button" class="mode on" data-mode="video" role="tab">🎥 Punya video ngomong<small>Talking head, edukasi AI, review, konten kreator</small></button>
+    <button type="button" class="mode" data-mode="product" role="tab">🛍️ Tanpa video orang<small>Isi info produk/tools + foto/video</small></button>
+  </div>
+
+  <div class="opts">
+    <div class="field full" id="productForm" hidden>
+      <div class="pf grid2">
+        <div class="field"><label class="l" for="pBrand">Nama brand *</label><input id="pBrand" placeholder="mis. MG Creator"></div>
+        <div class="field"><label class="l" for="pTitle">Nama produk / judul utama *</label><input id="pTitle" placeholder="mis. AI Motion Graphic Tools untuk Kreator"></div>
+        <div class="field full"><label class="l" for="pTagline">Tagline</label><input id="pTagline" placeholder="mis. Building AI Tools For A Better Future"></div>
+        <div class="field full"><label class="l" for="pDesc">Deskripsi singkat</label><textarea id="pDesc" rows="2" placeholder="Produk apa, untuk siapa, dan masalah apa yang diselesaikan"></textarea></div>
+        <div class="field full"><label class="l" for="pFeatures">Fitur / keunggulan (1 per baris)</label><textarea id="pFeatures" rows="3" placeholder="AI Innovation Future&#10;Build Create Impact&#10;15+ Gaya Motion Graphic Otomatis"></textarea></div>
+        <div class="field"><label class="l" for="pPrice">Harga / promo (opsional)</label><input id="pPrice" placeholder="mis. Rp149.000, diskon 50%"></div>
+        <div class="field"><label class="l" for="pCta">Ajakan / CTA</label><input id="pCta" placeholder="mis. Klik link di bio MG Creator"></div>
+        <div class="field"><label class="l" for="pDur">Durasi video</label><select id="pDur"><option value="15">15 detik</option><option value="30" selected>30 detik</option><option value="45">45 detik</option><option value="60">60 detik</option><option value="78">78 detik (maksimal)</option></select></div>
+        <div class="field"><label class="l" for="pVoice">Suara narator AI</label><select id="pVoice"><option value="Kore">Perempuan, tegas</option><option value="Leda">Perempuan, ceria</option><option value="Charon">Laki-laki, informatif</option><option value="Puck">Laki-laki, semangat</option><option value="none">Tanpa suara (teks saja)</option></select></div>
+        <div class="field full" hidden><label class="l">Warna tema (opsional)</label><div class="colors"><input type="color" id="pC1" value="#FF1E27" aria-label="Warna utama"><input type="color" id="pC2" value="#FFFFFF" aria-label="Warna kedua"><label class="toggle"><input type="checkbox" id="pCustom"> Pakai warna ini (kalau tidak, ikut gaya)</label></div></div>
+      </div>
+      <p class="hint help">💡 Maksimal 78 detik supaya suara AI dan render tetap stabil, terutama di HP. Upload foto/video produk di bawah (latar polos paling bagus). Kalau tidak ada, AI membuatkan gambar.</p>
+    </div>
+
+    <div class="field"><label class="l" for="optAspect">Format output</label><select id="optAspect"><option value="asli">Sama seperti video asli</option><option value="9:16">9:16 · Vertikal (story / short)</option><option value="4:5">4:5 · Feed</option><option value="1:1">1:1 · Kotak</option><option value="16:9">16:9 · Horizontal</option></select></div>
+    <div class="field"><label class="l" for="optImages">Gambar buatan AI untuk b-roll</label><select id="optImages"><option value="0">Tidak usah</option><option value="2" selected>Maksimal 2 gambar</option><option value="4">Maksimal 4 gambar</option><option value="6">Maksimal 6 gambar</option></select></div>
+    <div class="field full"><label class="l" for="optColor">Warna</label><div class="colors"><select id="optColor"><option value="">Biar AI / gaya yang pilih</option><option value="auto">🎨 Ambil otomatis dari warna produk / video</option><option value="custom">Pilih sendiri</option></select><span id="customColors" hidden><input type="color" id="optC1" value="#FF1E27" aria-label="Warna utama"><input type="color" id="optC2" value="#FFFFFF" aria-label="Warna kedua"></span><span class="chips" id="paletteChips"></span></div></div>
+    <div class="field"><label class="l" for="optMusic">Musik latar (original, otomatis)</label><select id="optMusic"><option value="auto">✨ Otomatis (AI pilih)</option><option value="lofi">Lo-fi santai</option><option value="corporate">Upbeat profesional</option><option value="hype">Hype / trap</option><option value="cinematic">Sinematik</option><option value="tech">Tech minimal</option><option value="happy">Ceria</option><option value="dramatic">Dramatis</option><option value="none">Tanpa musik</option></select></div>
+    <div class="field" id="optModelField" style="display:none"><label class="l" for="optModel">Model AI</label><select id="optModel"></select></div>
+    <div class="field"><label class="l" for="optTone">Tema motion</label><select id="optTone"><option value="">Ikut gaya</option><option value="color">Berwarna</option><option value="bw">Motion hitam-putih (garis, latar, teks)</option><option value="silver">Motion silver chrome</option></select></div>
+    <div class="field" id="camField"><label class="l" for="optCam">Kamera otomatis</label><select id="optCam"><option value="">Biar AI yang atur</option><option value="angles">Ganti angle (multi-kamera)</option><option value="jumpcut">Jump-cut zoom</option><option value="halus">Zoom halus</option><option value="off">Diam</option></select></div>
+    <div class="field full">
+      <label class="l">Gaya motion: klik untuk memilih. Semua detailnya (warna, font, animasi teks, latar, transisi, kamera) bisa diedit lagi di studio lalu disimpan jadi template.</label>
+      <select id="optPreset" hidden><option value="auto">Otomatis</option></select>
+      <div class="style-grid" id="styleGrid"></div>
+      <p class="hint help" id="styleDesc"></p>
+      <label class="toggle full-ai"><input type="checkbox" id="optFullAI"> <span><b>🧠 Mode AI penuh</b> (untuk gaya Otomatis): AI merancang sendiri scene animasi dari nol, transisi, efek suara, dan komposisi musik. <em>Proses AI ±20–60 dtk lebih lama, pemakaian akun lebih besar (±2 permintaan &amp; ±14 rb token tambahan), dan render bisa sedikit lebih lama.</em></span></label>
+    </div>
+    <div class="field full" id="briefField">
+      <label class="l" for="optBrief">Konteks (opsional): produk, target penonton, CTA</label>
+      <textarea id="optBrief" rows="2" placeholder="Contoh: Konten edukasi AI oleh MG Creator. CTA: komen 'MAU' biar dikirim akses tools-nya."></textarea>
+      <details class="tips"><summary>📝 Punya naskah VO? Tempel di sini (opsional, supaya caption lebih tepat)</summary><textarea id="optVO" rows="3" placeholder="Tempel naskah persis seperti yang kamu ucapkan di video"></textarea></details>
+    </div>
+    <div class="field full" id="nicheField">
+      <label class="l" for="optNiche">Paket niche (aturan editing sesuai jenis konten)</label>
+      <select id="optNiche"><option value="">✨ Biar AI pilih sesuai isi video</option></select>
+      <p class="hint help" id="nicheDesc">AI akan memilih paket yang paling cocok dengan isi videomu.</p>
+    </div>
+    <div class="field full">
+      <label class="l" id="assetLabel">Footage &amp; gambar tambahan (opsional): video produk, screenshot, foto. AI yang mengatur penempatannya.</label>
+      <div class="land-assets"><button class="btn" id="landAssetBtn" type="button">＋ Tambah footage / gambar</button><span class="chips" id="landAssets"></span></div>
+    </div>
+  </div>
+
+  <div class="access" id="access"></div>
+  <div class="drop" id="drop" tabindex="0" role="button" aria-label="Pilih video">
+    <div class="icon">↑</div>
+    <div class="big">Tarik &amp; lepas video di sini</div>
+    <div class="mut">atau klik untuk memilih · MP4 / MOV / WEBM · ideal ≤ 3 menit</div>
+    <div class="mut" style="margin-top:6px;font-size:12px">💡 Paling lancar di HP: video 1080p/720p, di bawah 100 MB. Video 4K atau ratusan MB sebaiknya dikompres dulu.</div>
+  </div>
+  <button type="button" class="btn primary big-cta" id="btnProduct" hidden>✨ Buatkan video produk MG Creator</button>
+
+  <div class="features">
+    <div class="feat"><b>Caption &amp; animasi teks</b>Kata kunci besar berwarna merah-putih khas MG Creator, sinkron per kata.</div>
+    <div class="feat"><b>B-roll &amp; ganti latar HUD</b>Foto/video kamu, gambar AI, latar HUD futuristik di belakang orang, mockup HP.</div>
+    <div class="feat"><b>15+ Gaya Motion Unik</b>Langkah, grafik, perbandingan, spotlight produk, dengan skema warna &amp; tipografi berbeda.</div>
+    <div class="feat"><b>Musik &amp; render MP4</b>Musik latar original + efek suara otomatis, render langsung di browser.</div>
+  </div>
+  <div id="guideHost"></div>
+  <p class="note">MG Creator Motion — Building AI Tools For A Better Future. Video diproses langsung di browser.</p>
+</section>
+
+<section id="studio" hidden>
+  <div class="stage-col">
+    <div class="mg-studio-banner">
+      <div class="mg-studio-left">
+        <div class="mg-studio-avatar">
+          <img src="/assets/aistudio/Gemini_Generated_Image_hs97wyhs97wyhs97_5d45ed64.jpeg" alt="MG Creator" referrerpolicy="no-referrer" />
+        </div>
+        <div class="mg-studio-meta">
+          <div class="mg-studio-title">
+            <svg class="mg-mini-svg" viewBox="0 0 132 48" aria-hidden="true">
+              <path d="M4 44V6h14l13 21 13-21h14v38H45V21L32 41h-2L17 21v23H4Z" fill="#FFFFFF"/>
+              <path d="M92 6h34l-7 11H91c-7 0-12 4.5-12 11s5 11 12 11h15v-7H93v-9h27v21c0 3-2.5 5-6 5H89c-14.5 0-24-9-24-21S74.5 6 92 6Z" fill="#FF1E27"/>
+            </svg>
+            <strong>CREATOR MOTION</strong>
+            <span class="mg-studio-pill">AI DIRECTOR STUDIO</span>
+          </div>
+          <div class="mg-studio-sub">BUILDING <b>AI</b> TOOLS FOR A BETTER FUTURE · <span>AI · INNOVATION · FUTURE</span> · <span>BUILD · CREATE · IMPACT</span></div>
+        </div>
+      </div>
+      <div class="mg-studio-actions">
+        <button type="button" class="btn" id="btnApplyMgStyle" title="Terapkan Gaya Khas MG Creator">🔥 Gaya MG Creator</button>
+        <button type="button" class="btn" id="btnOpenLanding" title="Buka Halaman Upload & Pengaturan Awal">📤 Upload / Produk Baru</button>
+      </div>
+    </div>
+
+    <div class="stage" id="stage">
+      <div class="mg-stage-hud mg-stage-hud-left" aria-hidden="true">
+        <div class="mg-stage-motto">
+          <span class="red">AI</span>
+          <span>INNOVATION</span>
+          <span>FUTURE</span>
+        </div>
+        <div class="mg-stage-bars">
+          <i class="red" style="width:82%"></i>
+          <i style="width:56%"></i>
+          <i class="red" style="width:94%"></i>
+        </div>
+        <div class="mg-stage-Equalizer">
+          <b style="height:28%"></b><b style="height:64%" class="red"></b><b style="height:45%"></b><b style="height:88%" class="red"></b><b style="height:52%"></b><b style="height:74%" class="red"></b>
+        </div>
+      </div>
+
+      <canvas id="pv" width="540" height="960"></canvas>
+
+      <div class="mg-stage-hud mg-stage-hud-right" aria-hidden="true">
+        <svg viewBox="0 0 100 100" class="mg-stage-radar">
+          <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,0.14)" stroke-width="1.5" stroke-dasharray="14 6"/>
+          <circle cx="50" cy="50" r="30" fill="none" stroke="#FF1E27" stroke-width="1.8" stroke-dasharray="24 10" opacity="0.8"/>
+          <circle cx="50" cy="50" r="18" fill="none" stroke="rgba(255,255,255,0.28)" stroke-width="1.2"/>
+          <circle cx="50" cy="50" r="6" fill="none" stroke="#FF1E27" stroke-width="1.8"/>
+        </svg>
+        <div class="mg-stage-motto right">
+          <span class="red">BUILD</span>
+          <span>CREATE</span>
+          <span>IMPACT</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="transport">
+      <button class="play" id="btnPlay" title="Putar / jeda (Spasi)">▶</button>
+      <span class="time" id="time"><b>00:00.0</b> / 00:00.0</span>
+      <span class="sp"></span>
+      <button class="btn" id="btnStart" title="Ke awal">⟲ Awal</button>
+    </div>
+    <div class="tlwrap" id="tlWrap"><canvas id="tl"></canvas></div>
+  </div>
+
+  <aside class="panel">
+    <nav class="tabs">
+      <button class="tab" data-tab="ai">✨ AI</button>
+      <button class="tab" data-tab="motion">Motion</button>
+      <button class="tab" data-tab="caption">Caption</button>
+      <button class="tab on" data-tab="style">🎨 Style</button>
+      <button class="tab" data-tab="assets">Aset</button>
+      <button class="tab" data-tab="project">Proyek</button>
+    </nav>
+    <div class="tab-body" id="tab-ai"></div>
+    <div class="tab-body" id="tab-motion" hidden></div>
+    <div class="tab-body" id="tab-caption" hidden></div>
+    <div class="tab-body" id="tab-style" hidden></div>
+    <div class="tab-body" id="tab-assets" hidden></div>
+    <div class="tab-body" id="tab-project" hidden></div>
+  </aside>
+</section>
+
+<div class="modal" id="busy" hidden>
+  <div class="dlg">
+    <h3 id="busyTitle">MG Creator Motion sedang menyiapkan…</h3>
+    <ul class="steps" id="steps"></ul>
+    <div class="err" id="busyErr" hidden></div>
+    <div class="busy-fast" id="busyFast" hidden><span>AI masih menyusun… Klik Percepat untuk langsung memakai rencana ringkas.</span><button class="btn" type="button" id="btnFast">⚡ Percepat</button></div>
+    <div class="dlg-actions" id="busyActs" hidden><button class="btn" data-act="bClose">Tutup</button><button class="btn" data-act="bManual">Susun otomatis tanpa AI</button><button class="btn primary" data-act="bRetry">Coba lagi dengan AI</button></div>
+  </div>
+</div>
+
+<div class="modal" id="renderModal" hidden>
+  <div class="dlg">
+    <h3>Render Video — MG Creator Motion</h3>
+    <div id="rOpts">
+      <div class="grid2">
+        <div class="field"><label class="l" for="rRes">Resolusi</label><select id="rRes"><option value="1080">1080p (HD penuh)</option><option value="720">720p (lebih cepat)</option></select></div>
+        <div class="field"><label class="l" for="rFps">Frame rate</label><select id="rFps"><option value="30">30 fps</option><option value="25">25 fps</option><option value="60">60 fps</option></select></div>
+      </div>
+      <label class="toggle"><input type="checkbox" id="rLite"> Mode ringan: lebih cepat, tanpa ganti latar orang, blur, dan grain (disarankan di HP)</label>
+      <p class="hint" id="rEst"></p>
+      <p class="hint">Render presisi frame-by-frame langsung di browser, lengkap dengan audio + efek suara. Biarkan halaman ini tetap terbuka selama proses.</p>
+      <details class="tips"><summary>💡 Tips render cepat di HP</summary><ul><li>Pilih 720p dan 30 fps. 1080p bisa 2× lebih lama.</li><li>Aktifkan Mode ringan (otomatis aktif di HP).</li><li>Jangan pindah aplikasi atau mengunci layar; render berhenti saat halaman ditinggal.</li><li>Colokkan charger dan tutup aplikasi lain supaya HP tidak melambat karena panas.</li><li>Video lebih dari 60 detik? Render di laptop lebih nyaman.</li></ul></details>
+    </div>
+    <div id="rProg" hidden><div class="bar"><i id="rBar"></i></div><p class="hint" id="rTxt">Menyiapkan…</p></div>
+    <div id="rDone" hidden><video id="rVid" controls playsinline></video><p class="hint" id="rInfo"></p></div>
+    <div class="err" id="rErr" hidden></div>
+    <div class="dlg-actions"><button class="btn" data-act="rClose">Tutup</button><button class="btn" data-act="rCancel" hidden>Batalkan</button><a class="btn primary" id="rDl" hidden download>⬇ Download</a><button class="btn primary" data-act="rStart">Mulai render</button></div>
+  </div>
+</div>
+
+<div class="modal" id="guideModal" hidden>
+  <div class="dlg dlg-wide">
+    <div id="guideModalBody"></div>
+    <div class="dlg-actions"><button class="btn primary" id="guideClose" type="button">Mengerti</button></div>
+  </div>
+</div>
+
+<div id="toast"></div>
+<video id="vid" playsinline preload="auto" hidden></video>
+<input type="file" id="fileIn" accept="video/*,.mov,.mp4,.m4v,.webm,.mkv" hidden>
+<input type="file" id="jsonIn" accept=".automotion,.json,application/json,application/octet-stream" hidden>
+<input type="file" id="assetIn" accept="image/*,video/*,.mov,.mp4,.webm" multiple hidden>
+<input type="file" id="shotIn" accept="image/*" multiple hidden>
+`;

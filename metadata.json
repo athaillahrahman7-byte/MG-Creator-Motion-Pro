@@ -1,0 +1,6 @@
+{
+  "name": "Auto Motion — AI Video Motion Graphic System",
+  "description": "Sistem pembuat motion graphic video 9:16 otomatis berbasis AI untuk konten TikTok, Reels, dan Shorts dengan lower third, grafik statistik, B-Roll callout, dan dynamic caption.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
