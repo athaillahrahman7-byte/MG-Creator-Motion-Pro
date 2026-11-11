@@ -93,6 +93,23 @@ async function startServer() {
         genConfig.responseSchema = sanitizeSchema(genConfig.responseSchema);
       }
 
+      let activeContents = payload.contents || [];
+      const rawSchemaStr = genConfig.responseSchema
+        ? JSON.stringify(genConfig.responseSchema)
+        : '';
+      if (rawSchemaStr.length > 1400) {
+        genConfig.responseMimeType = 'application/json';
+        delete genConfig.responseSchema;
+        const cloned = JSON.parse(JSON.stringify(activeContents));
+        const last = cloned[cloned.length - 1];
+        if (last && Array.isArray(last.parts)) {
+          last.parts.push({
+            text: `\n\nRespond strictly with valid JSON conforming to this schema:\n${rawSchemaStr}`,
+          });
+        }
+        activeContents = cloned;
+      }
+
       const rawModel = String(model || 'gemini-3.1-flash-lite');
       const targetModel = EXHAUSTED_MODELS.has(rawModel) ? 'gemini-3.1-flash-lite' : rawModel;
       const isTts =
@@ -143,7 +160,7 @@ async function startServer() {
         try {
           const response = await ai.models.generateContent({
             model: m,
-            contents: payload.contents || [],
+            contents: activeContents,
             config: cfg,
           });
           res.json({
