@@ -342,22 +342,23 @@
 <input type="file" id="shotIn" accept="image/*" multiple hidden>
       </div>
     </div>
-    <script type="module" src="./src/main.tsx"></script>
+    <script type="module" src="./src/main.tsx" onerror="window.__MG_STATIC_FALLBACK__ && window.__MG_STATIC_FALLBACK__()"></script>
     <script>
       (function () {
         function bootStatic() {
           if (window.__MG_BOOTED__) return;
           var s = document.createElement('script');
           s.type = 'module';
-          s.src = './src/standaloneBoot.js';
+          s.src = './src/standaloneBoot.js?v=20261112_pro5';
           document.body.appendChild(s);
         }
+        window.__MG_STATIC_FALLBACK__ = bootStatic;
         var isViteDev = !!document.querySelector('script[src*="@vite/client"]');
         var hasRawTsx = !!document.querySelector('script[src*="src/main.tsx"]');
         if (!isViteDev && hasRawTsx) {
           bootStatic();
         } else {
-          setTimeout(bootStatic, 1000);
+          setTimeout(bootStatic, 2500);
         }
       })();
     </script>
